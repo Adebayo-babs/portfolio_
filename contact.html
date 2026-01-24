@@ -1,0 +1,198 @@
+<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adebayo Jamiu | Software Developer</title>
+    
+    <!-- Favicon - Complete Cross-Browser Solution -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body class="<%= page %>-page">
+    <div class="container">
+        <!-- views/partials/nav.ejs -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">ADEBAYO</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                    <li><a href="about.html" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
+                    <li><a href="projects.html" class="<%= page === 'projects' ? 'active' : '' %>">Projects</a></li>
+                    <li><a href="skills.html" class="<%= page === 'skills' ? 'active' : '' %>">Skills</a></li>
+                    <li><a href="contact.html" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://github.com/Adebayo-babs" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/adebayo-jamiu-a737a6172/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/adebayojamiu38" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/adebayor_babs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </nav>
+        </header>
+        <main class="content">
+
+            <section class="contact-section">
+    <div class="section-title">
+        <h1>Get In Touch</h1>
+        <p>Feel free to contact me for any work or suggestions</p>
+    </div>
+    
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>I'm open to freelance opportunities, collaborations, and full-time positions. Don't hesitate to reach out!</p>
+            
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="info-content">
+                    <h3>Email</h3>
+                    <p><a href="mailto:adebayojamiu38@gmail.com">adebayojamiu38@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-content">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+2348165798543">+234 816 579 8543</a></p>
+                    <p><a href="tel:+2349123725428">+234 912 372 5428</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-content">
+                    <h3>Location</h3>
+                    <p>Nigeria</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <h3>Find Me On</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/Adebayo-babs" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/adebayo-jamiu-a737a6172/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/adebayojamiu38" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/adebayor_babs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form id="contactForm">
+                <div class="form-group" id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+      };
+      
+      // Send the form data to the server
+      fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+  });
+</script>
+
+
+        
+
+    
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/">AJ</a>
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://github.com/Adebayo-babs" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adebayo-jamiu-a737a6172/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/adebayojamiu38" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/adebayor_babs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        &copy; 2026 Adebayo Jamiu. All Rights Reserved.
+                    </div>
+                    <div class="footer-contact">
+                        <span>Need help? <a href="mailto:adebayojamiu38@gmail.com">adebayojamiu38@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

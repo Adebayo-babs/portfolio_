@@ -1,0 +1,166 @@
+<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adebayo Jamiu | Software Developer</title>
+    
+    <!-- Favicon - Complete Cross-Browser Solution -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body class="<%= page %>-page">
+    <div class="container">
+        <!-- views/partials/nav.ejs -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">ADEBAYO</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                    <li><a href="about.html" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
+                    <li><a href="projects.html" class="<%= page === 'projects' ? 'active' : '' %>">Projects</a></li>
+                    <li><a href="skills.html" class="<%= page === 'skills' ? 'active' : '' %>">Skills</a></li>
+                    <li><a href="contact.html" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://github.com/Adebayo-babs" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/adebayo-jamiu-a737a6172/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/adebayojamiu38" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/adebayor_babs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </nav>
+        </header>
+        <main class="content">
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="greeting">Hello, I'm <span class="name">Adebayo Jamiu</span></h1>
+                <h2 class="title">Android Developer  | Software Developer</h2>
+                <p class="intro">Results-driven developer with 4+ years of experience building robust web and mobile applications.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn primary-btn">Get In Touch</a>
+                    <a href="images/ade_CV.pdf" download class="btn secondary-btn">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- This would be replaced with your actual profile image -->
+                <div class="profile-image-placeholder">
+                    <img src="images/profile_pic1.jpg" alt="Adebayo Jamiu" class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <div class="section-title">
+                <h2>What I Do</h2>
+            </div>
+            <div class="highlight-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and dynamic web applications.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Development</h3>
+                    <p>Creating native Android applications with Kotlin following MVVM architecture principles.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Back-End Development</h3>
+                    <p>Developing robust APIs and server-side applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="project-preview">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/E-Commerce.jpg" alt="E-Commerce Application">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Application</h3>
+                        <p>A full-featured marketplace built with MongoDB, Express, and Node.js with user authentication.</p>
+                        <a href="projects.html" class="btn small-btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Real_Estate.jpg" alt="Real Estate Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>Real Estate Platform</h3>
+                        <p>Cloud-based property listing system with realtor profiles and advanced search capabilities.</p>
+                        <a href="projects.html" class="btn small-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="projects.html" class="btn primary-btn">View All Projects</a>
+            </div>
+        </section>
+
+    
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/">AJ</a>
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://github.com/Adebayo-babs" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adebayo-jamiu-a737a6172/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/adebayojamiu38" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/adebayor_babs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        &copy; 2026 Adebayo Jamiu. All Rights Reserved.
+                    </div>
+                    <div class="footer-contact">
+                        <span>Need help? <a href="mailto:adebayojamiu38@gmail.com">adebayojamiu38@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
